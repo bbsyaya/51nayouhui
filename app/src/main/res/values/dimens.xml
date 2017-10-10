@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--header高度-->
+    <item name="ht_header" type="dimen">60dp</item>
+
+    <!--dimens-->
+    <item name="dp10" type="dimen">10dp</item>
+    <item name="dp20" type="dimen">20dp</item>
+
+    <!--分割线高度|宽度-->
+    <item name="px1" type="dimen">1px</item>
+</resources>

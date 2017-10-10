@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主色调-->
+    <color name="basic">#FC5600</color>
+    <color name="white">#fff</color>
+    <color name="gray_lt">#dedede</color>
+    <color name="black">#000</color>
+
+    <color name="colorPrimary">#FC5600</color>
+    <color name="colorPrimaryDark">#FC5600</color>
+    <color name="colorAccent">#FC5600</color>
+</resources>
