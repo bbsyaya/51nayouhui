@@ -9,8 +9,13 @@ import com.nayouhui.live.entity.HomeData;
 import com.nayouhui.live.util.BeanCallback;
 import com.nayouhui.live.util.Constant;
 import com.nayouhui.live.util.OkHttpUtil;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import butterknife.Bind;
+import okhttp3.Call;
+
+import static com.nayouhui.live.util.Constant.URL_SMS;
 
 public class MainActivity extends BaseActivity {
 
@@ -27,12 +32,31 @@ public class MainActivity extends BaseActivity {
                 Log.e(TAG, "response: " + data);
             }
         });
+
+        //Content-Type=application/json
+        OkHttpUtils
+                .post()
+                .url(Constant.URL_SMS)
+                .addHeader("Content-Type", "application/json")
+                .addParams("phone_num", "15311441217")
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int i) {
+
+                    }
+
+                    @Override
+                    public void onResponse(String s, int i) {
+                        Log.e(TAG, "onResponse: s = " + s);
+                    }
+                });
+
     }
 
     @Override
     protected int setView() {
         return R.layout.activity_main;
     }
-
 
 }

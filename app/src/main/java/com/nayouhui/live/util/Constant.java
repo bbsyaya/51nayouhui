@@ -15,5 +15,8 @@ public class Constant {
     private static final String PORT = ":8080";
     private static final String CTX = PROTOCAL + HOST + PORT;
 
+    //首页
     public static final String URL_HOME = CTX + "/index.php?m=Home&a=homePage";
+    //短信
+    public static final String URL_SMS = CTX + "/index.php?m=Login&a=code";
 }
